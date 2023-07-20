@@ -1,0 +1,16 @@
+<div class="author">
+  <h1 class="author__heading">Search Results</h1>
+</div>
+
+<section class="articles">
+  <ul class="article-ul">
+    <% for( let index = 0; index < data.length; index++ ) { %>
+      <li>
+        <a href="/post/<%= data[index]._id %>">
+          <span><%= data[index].title %></span>
+          <span class="article-list__date"><%= data[index].createdAt.toDateString() %></span>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+</section>
